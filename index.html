@@ -1,0 +1,273 @@
+<html>
+<html lang="en">
+  <head>
+    <title>Solar System Planets</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"
+    />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel = "stylesheet" href = "./style.css">
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="heading">
+      <div id= "navigation" class="ui header">
+        <a class="active" href="index.html">Home</a>
+        <a class= "navigation" href="#form">Bookings Info</a>
+        <a class= "navigation" href="#contact">Contact</a>
+        <a class= "navigation" href="https://science.nasa.gov/solar-system/planets/" >Refrences</a>
+      </div>
+        <div class="item">
+            <h2 class="ui header">                
+              <i class="Planets-icon"> <img src = "Potrait.png" alt = "Planet Icon "></i>
+                <div class=" content"> Solar System Planets
+                  <!-- DarkMode Button -->
+                  <button id="darkmode" onclick="dark()" onmouseover="white()" onmouseout="black()" style="color: black;">Darkmode</button>
+                </div>
+                <div class="sub header" id="subtitle">Universal Studies</div>              
+            </h2>
+        </div>
+    </div>
+    <div class="buttons">
+      
+      <!-- Input Search button -->
+      <input type="text" id="serach" placeholder="Search by Planet name">
+      <button id="searchButton" class="tiny class ui button" > Search </button>
+
+      <!-- Filter button -->
+      <button id="filter-size" class="medium class ui button" > Filter by Size</button>
+
+      <!-- Filter button -->
+      <button id="filter-moon" class="medium class ui button" > Filter by Number of Moons</button>
+    </div>
+    <div id="welcome">
+      <h1>Welcome to Solar System Planets Data!</h1>
+      <h3>Browse through the collection of planets in our Solar System and fill out a form to book a flight to go to any planet!</h3>
+      <h3>Curoius in how long a flight to any planet will take? Book one and see the distance between you and your planet of choice</h3>
+      <h3>Filter planets with buttons above!</h3>
+
+    </div> <br>
+        <div id="planet-data" class="planets">
+          <div>
+                <div class="card" style="display: inline-block;">
+                  <img src="placeholder.png" alt="Planet image" style="width:100%">
+                  <div id= "planet1" class="container">
+                      <div id="planet-facts">
+                        <div>
+                          <div id="planet-name" class="info">[Planet Name]</div>
+                          <div id="tag-line" class="info">[PLANET TYPE]</div>
+                          <div>
+                            <div>
+                              <div id="planet-description" class="info">[PLANET DESCRIPTION]</div>
+                              <div id="sun-distance" class="info">[DISTANCE FROM SUN]</div>
+                              <div id="moon-number" class="info">[NUMBER OF MOONS]</div>
+                              <div id="nick-name" class="info">[NICKNAME OF PLANET]</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="display: inline-block;">
+                  <img src="placeholder.png" alt="Planet image" style="width:100%">
+                  <div id= "planet2" class="container">
+                      <div id="planet-facts">
+                        <div>
+                          <div id="planet-name" class="info">[Planet Name]</div>
+                          <div id="tag-line" class="info">[PLANET TYPE]</div>
+                          <div>
+                            <div>
+                              <div id="planet-description" class="info">[PLANET DESCRIPTION]</div>
+                              <div id="sun-distance" class="info">[DISTANCE FROM SUN]</div>
+                              <div id="moon-number" class="info">[NUMBER OF MOONS]</div>
+                              <div id="nick-name" class="info">[NICKNAME OF PLANET]</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="display: inline-block;">
+                  <img src="placeholder.png" alt="Planet image" style="width:100%">
+                  <div id= "planet3" class="container">                    
+                      <div id="planet-facts">
+                        <div>
+                          <div id="planet-name" class="info">[Planet Name]</div>
+                          <div id="tag-line" class="info">[PLANET TYPE]</div>
+                          <div>
+                            <div>
+                              <div id="planet-description" class="info">[PLANET DESCRIPTION]</div>
+                              <div id="sun-distance" class="info">[DISTANCE FROM SUN]</div>
+                              <div id="moon-number" class="info">[NUMBER OF MOONS]</div>
+                              <div id="nick-name" class="info">[NICKNAME OF PLANET]</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="display: inline-block;">
+                  <img src="placeholder.png" alt="Planet image" style="width:100%">
+                  <div id= "planet4" class="container">
+                      <div id="planet-facts">
+                        <div>
+                          <div id="planet-name" class="info">[Planet Name]</div>
+                          <div id="tag-line" class="info">[PLANET TYPE]</div>
+                          <div>
+                            <div>
+                              <div id="planet-description" class="info">[PLANET DESCRIPTION]</div>
+                              <div id="sun-distance" class="info">[DISTANCE FROM SUN]</div>
+                              <div id="moon-number" class="info">[NUMBER OF MOONS]</div>
+                              <div id="nick-name" class="info">[NICKNAME OF PLANET]</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="display: inline-block;">
+                  <img src="placeholder.png"alt="Planet image" style="width:100%">
+                  <div id= "planet5" class="container">
+                      <div id="planet-facts">
+                        <div>
+                          <div id="planet-name" class="info">[Planet Name]</div>
+                          <div id="tag-line" class="info">[PLANET TYPE]</div>
+                          <div>
+                            <div>
+                              <div id="planet-description" class="info">[PLANET DESCRIPTION]</div>
+                              <div id="sun-distance" class="info">[DISTANCE FROM SUN]</div>
+                              <div id="moon-number" class="info">[NUMBER OF MOONS]</div>
+                              <div id="nick-name" class="info">[NICKNAME OF PLANET]</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="display: inline-block;">
+                  <img src="placeholder.png"alt="Planet image" style="width:100%">
+                  <div id= "planet6" class="container">
+                      <div id="planet-facts">
+                        <div>
+                          <div id="planet-name" class="info">[Planet Name]</div>
+                          <div id="tag-line" class="info">[PLANET TYPE]</div>
+                          <div>
+                            <div>
+                              <div id="planet-description" class="info">[PLANET DESCRIPTION]</div>
+                              <div id="sun-distance" class="info">[DISTANCE FROM SUN]</div>
+                              <div id="moon-number" class="info">[NUMBER OF MOONS]</div>
+                              <div id="nick-name" class="info">[NICKNAME OF PLANET]</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="display: inline-block;">
+                  <img src="placeholder.png"alt="Planet image" style="width:100%">
+                  <div id= "planet7" class="container">
+                      <div id="planet-facts">
+                        <div>
+                          <div id="planet-name" class="info">[Planet Name]</div>
+                          <div id="tag-line" class="info">[PLANET TYPE]</div>
+                          <div>
+                            <div>
+                              <div id="planet-description" class="info">[PLANET DESCRIPTION]</div>
+                              <div id="sun-distance" class="info">[DISTANCE FROM SUN]</div>
+                              <div id="moon-number" class="info">[NUMBER OF MOONS]</div>
+                              <div id="nick-name" class="info">[NICKNAME OF PLANET]</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="display: inline-block;">
+                  <img src="placeholder.png"alt="Planet image" style="width:100%">
+                  <div id= "planet8" class="container">
+                      <div id="planet-facts">
+                        <div>
+                          <div id="planet-name" class="info">[Planet Name]</div>
+                          <div id="tag-line" class="info">[PLANET TYPE]</div>
+                          <div>
+                            <div>
+                              <div id="planet-description" class="info">[PLANET DESCRIPTION]</div>
+                              <div id="sun-distance" class="info">[DISTANCE FROM SUN]</div>
+                              <div id="moon-number" class="info">[NUMBER OF MOONS]</div>
+                              <div id="nick-name" class="info">[NICKNAME OF PLANET]</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="form" class="form">
+      <h2>Enter your travel details below</h2>
+      <form action="" id="carsubmit">
+        <label for="pname">Planet Name: ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  </label>
+        <input type="text" id="pname" class="Input"name="pname" placeholder="Planet Name"><br>
+        <label for="capacity">Number of People:</label>
+        <input type="number" id="people"class="Input" name="people" placeholder="Number of People"><br>
+        <label for="contact">Contact Info:‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </label>
+        <input type="number" id="contactI"class="Input" name="contact" placeholder="Enter Contact Info"><br>
+        <label for="name">Personal Name:‎ ‎ ‎ ‎ ‎ ‎ ‎ </label>
+        <input type="text" id="name" class="Input"name="name" placeholder="Enter your Name"><br>
+        <button id="submit" class="medium class ui button" type="submit">Submit</button>
+      </form>
+
+    </div>
+    <!--Footer-->
+    <footer>
+      <div id="contact" class="contact">
+        <p> <a href="mailto:billjoseph@gmail.com">Click here to Send us an email</a></p>
+        <p><strong>Call us at this number: </strong> <em>071-234-567-890</em></p>
+      </div>
+      <p><strong>Author:</strong>  <em>Bill Mageni</em><br>
+        <strong>Copyright:</strong> <em> Bill Joseph 2024 </em></p>
+      <a class="backup" href="index.html">Back to top</a>
+    </footer>
+    <script src = "/index.js" ></script>
+  </body>
+</html>
+
+
+<!-- Planets Facts
+<div>
+  <div id="planet-facts">
+    <div>
+      <div id="planet-name" class="info">[Planet Name]</div>
+      <div id="tag-line" class="info">[PLANET TYPE]</div>
+      <div>
+        <div>
+          <div id="planet-description" class="info">[PLANET DESCRIPTION]</div>
+          <div id="sun-distance" class="info">[DISTANCE FROM SUN]</div>
+          <div id="moon-number" class="info">[NUMBER OF MOONS]</div>
+          <div id="nick-name" class="info">[NICKNAME OF PLANET]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>--> 

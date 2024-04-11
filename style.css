@@ -1,0 +1,178 @@
+body{
+    background-color: #b9631c;    
+}
+.heading {
+    background-color: #333333;
+    margin-bottom: 20px;
+    padding: 10px 40px 5px 0px;
+}
+.content {
+    color: hsl(24, 70%, 45%);
+    margin-left:auto ;
+    font-size: x-large;
+}
+#subtitle{
+    color: rgb(199, 191, 180);
+    margin-left:5% ;
+    margin-top: -2.5%;
+    margin-left: 5%;
+}
+
+.navigation:hover {
+    background-color: #ddd;
+    color: black;
+    padding-top: 0.498%;
+    padding-bottom: 0.5%;
+    padding-left: 0.8%;
+    padding-right: 0.8%;
+}
+
+#planet-image {
+    width: 400px; 
+    height: auto;
+    margin-left: 70px;
+}
+#planet-facts{ 
+    margin-left: 300px; 
+    width: 300px;
+}
+#darkmode{
+  border: none; 
+  color: white;
+  padding: 5px 4px; 
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 0.1%;
+  border-radius: 20%;
+  margin-left: 395%;
+}
+#darkmode:hover{
+    background-color: rgb(2, 3, 8);
+    color: #f2f2f2;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    display: block;
+    unicode-bidi: isolate;
+}
+#contact {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
+.heading .active {
+    background-color: #a15d04;
+    color: white;
+    padding-top: 0.498%;
+    padding-bottom: 0.5%;
+    padding-left: 0.8%;
+    padding-right: 0.8%;
+}
+#navigation{
+    margin-left: 2%;
+}
+.navigation{
+    margin-left: 2%;
+}
+#filter-size{
+    margin-left:7%;
+    margin-bottom: 3%;
+    color: rgb(63, 62, 62);
+}
+#filter-size:hover{
+    background-color: #994602;
+}
+
+#filter-moon{
+    margin-left:3%;
+    margin-bottom: 3%;
+    color: rgb(63, 62, 62);
+}
+#submit:hover{
+    background-color: #994602;
+}
+#filter-moon:hover{
+    background-color: #994602;
+}
+#searchButton{
+    color: rgb(255, 255, 255);
+    background-color: #271300;
+}
+#searchButton:hover{
+    background-color:#994602;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+.card {
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    padding: 2px;
+    padding-bottom: 200%;
+    position: relative;
+    background: #5d49cd;
+
+  }
+
+  .reserve{
+    color: blue;
+    border: #333;
+    border-radius: 10%;
+    border-color: #5d49cd;
+    padding: 12px 56px;
+    cursor: pointer;
+
+  }
+
+  .card:hover {
+    color: aliceblue;
+    background-color: #1f1073;
+  }
+.container {
+    margin-left: -60%;
+}
+
+.planets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+footer{
+    padding: 0%;
+}
+#welcome {
+    background-color: #b3b3b3;
+    justify-content: left;
+    justify-self: left;
+    margin: 0% auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 3%;
+}
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-top: 10%;
+    margin-bottom: 10px;
+    align-items: center;
+    align-content: center;
+}
