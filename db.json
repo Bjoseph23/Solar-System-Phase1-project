@@ -12,7 +12,7 @@
           "planetSize":"4879",
           "yearLength":"88",
           "numberOfMoons":"0",
-          "namesake":"ROMAN GOD OF SPEED",
+          "nickname":"ROMAN GOD OF SPEED",
           "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
        },
        {
@@ -27,7 +27,7 @@
           "planetSize":"12104",
           "yearLength":"225",
           "numberOfMoons":"0",
-          "namesake":"ROMAN GODDESS OF LOVE",
+          "nickname":"ROMAN GODDESS OF LOVE",
           "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
        },
        {
@@ -42,7 +42,7 @@
           "planetSize":"12742",
           "yearLength":"365",
           "numberOfMoons":"1",
-          "namesake":"VARIATION OF 'THE GROUNDED' IN MANY LANGUAGES",
+          "nickname":"VARIATION OF 'THE GROUNDED' IN MANY LANGUAGES",
           "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
        },
        {
@@ -57,7 +57,7 @@
           "planetSize":"6779",
           "yearLength":"687",
           "numberOfMoons":"2",
-          "namesake":"ROMAN GOD OF WAR",
+          "nickname":"ROMAN GOD OF WAR",
           "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
        },
        {
@@ -72,7 +72,7 @@
           "planetSize":"142984",
           "yearLength":"4,333",
           "numberOfMoons":"75",
-          "namesake":"KING OF THE ROMAN GODS",
+          "nickname":"KING OF THE ROMAN GODS",
           "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
        },
        {
@@ -87,7 +87,7 @@
           "planetSize":"116464",
           "yearLength":"10,759",
           "numberOfMoons":"82",
-          "namesake":"FATHER OF JUPITER",
+          "nickname":"FATHER OF JUPITER",
           "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
        },
        {
@@ -102,7 +102,7 @@
           "planetSize":"51118",
           "yearLength":"30,687",
           "numberOfMoons":"27",
-          "namesake":"GREEK GOD OF THE SKY",
+          "nickname":"GREEK GOD OF THE SKY",
           "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
        },
        {
@@ -117,7 +117,7 @@
           "planetSize":"49528",
           "yearLength":"60,190",
           "numberOfMoons":"14",
-          "namesake":"ROMAN GOD OF THE SEA",
+          "nickname":"ROMAN GOD OF THE SEA",
           "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
        }
     ]
