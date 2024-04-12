@@ -76,22 +76,29 @@ document.addEventListener("DOMContentLoaded", () => {
    nickName.innerHTML = `<p> <strong>Nickname: </strong>: ${planet.nickname} </p>`;
    planetContent.appendChild(nickName);
  }
-
- // Make a GET request to fetch JSON data with planets
- fetch("http://localhost:3000/planets")
-   .then((resp) => resp.json())
-   .then((data) => {
-     if (Array.isArray(data)) {
-       // Use forEach loop to display details for each planet
-       data.forEach((planet) => displayPlanetDetails(planet));//Function to create a card for each planet for the number of planets within the array in the db.json file
-     } else {
-       planetList.innerHTML = "<li>Invalid JSON format. Expected an array of Planets.</li>";
-     }
-   })
-   .catch((error) => {
-     console.error("Fetch error:", error);
-     planetList.innerHTML = "<li>Error fetching data.</li>";
-   });
+ 
+ //DOM elements for search
+ const search =document.getElementById("serach");
+ const searchButton=document.getElementById("searchButton")
+ 
+ //Function to handle planet search
+ function findPlanet(searchname) {
+  
+  const planetCards = document.querySelectorAll(".card");
+  //For each planet that has a matching name, displat it, else if not don't
+  for (const pcard of planetCards) {
+    const pcardName = pcard.querySelector("#planet-name").innerText.toLowerCase();
+    const searchTerm = searchname.toLowerCase();
+    // Check if the planet entered matches the the planet name selected with the variable called pcardName and display it, else it returns no planets found
+    if (pcardName.includes(searchTerm)) {
+      pcard.style.display = "inline-block";
+    } else {
+      pcard.style.display = "none";    
+    }
+  }
+  
+}
+  //Add functionality to our Submit button
   form.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevent default form submission
 
@@ -150,4 +157,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // Clear form fields after submission
     form.reset();
   });
+
+  //Add functionality to our search button
+  searchButton.addEventListener("click", () => {
+    const nameToBeSearched=search.value.toLowerCase();
+    findPlanet(nameToBeSearched);
+  });
+
+  // Make a GET request to fetch JSON data with planets
+ fetch("http://localhost:3000/planets",{
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+  }})
+   .then((resp) => resp.json())
+   .then((data) => {
+     if (Array.isArray(data)) {
+       // Use forEach loop to display details for each planet
+       data.forEach((planet) => displayPlanetDetails(planet));//Function to create a card for each planet for the number of planets within the array in the db.json file
+     } else {
+       planetList.innerHTML = "<li>Invalid JSON format. Expected an array of Planets.</li>";
+     }
+   })
+   .catch((error) => {
+     console.error("Fetch error:", error);
+     planetList.innerHTML = "<h2><p><em></em>Error fetching data.</p></h2>";
+   });
 });
