@@ -1,21 +1,42 @@
-body{
-    background-color: #b9631c;    
+#welcome {
+    background-color: #b3b3b3;
+    justify-content: left;
+    justify-self: left;
+    margin: 0% auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 3%;
 }
 .heading {
     background-color: #333333;
     margin-bottom: 20px;
     padding: 10px 40px 5px 0px;
 }
-.content {
-    color: hsl(24, 70%, 45%);
-    margin-left:auto ;
-    font-size: x-large;
+.heading .active {
+    background-color: #a15d04;
+    color: white;
+    padding-top: 0.498%;
+    padding-bottom: 0.5%;
+    padding-left: 0.8%;
+    padding-right: 0.8%;
+}
+.heading .active:hover{
+    background-color:#574c96;
 }
 #subtitle{
     color: rgb(199, 191, 180);
     margin-left:5% ;
     margin-top: -2.5%;
     margin-left: 5%;
+}
+body{
+    background-color: #b9631c;    
+}
+
+.content {
+    color: hsl(24, 70%, 45%);
+    margin-left:auto ;
+    font-size: x-large;
 }
 
 .navigation:hover {
@@ -40,37 +61,15 @@ body{
     background-color: rgb(2, 3, 8);
     color: #f2f2f2;
 }
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: white;
-    display: block;
-    unicode-bidi: isolate;
-}
-#contact {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: white;
-}
-.heading .active {
-    background-color: #a15d04;
-    color: white;
-    padding-top: 0.498%;
-    padding-bottom: 0.5%;
-    padding-left: 0.8%;
-    padding-right: 0.8%;
-}
-.heading .active:hover{
-    background-color:#574c96;
-}
+
+
 #navigation{
     margin-left: 2%;
 }
 .navigation{
     margin-left: 2%;
 }
+
 #filter-size{
     margin-left:7%;
     margin-bottom: 3%;
@@ -79,6 +78,7 @@ footer {
 #filter-size:hover{
     background-color: #994602;
 }
+
 
 #filter-moon{
     margin-left:3%;
@@ -103,19 +103,23 @@ body.dark-mode {
     background-color: #333;
     color: #fff;
 }
+body.dark-mode .form {
+    background-color: #333; 
+    color: #fff; 
+  }
+body.dark-mode .form {
+    background-color: #333; 
+    color: #fff; 
+  }
 .card {
-    align-items: center;
     width: 500px;
     height: 500px;
-    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border-radius: 9px;
     padding: 2px;
     padding-bottom: 65%;
-    position: relatie;
+    position: relative;
     background: #222f5a;
 
   }
@@ -136,18 +140,8 @@ body.dark-mode {
     align-items: center;
     gap: 20px;
   }
-footer{
-    padding: 0%;
-}
-#welcome {
-    background-color: #b3b3b3;
-    justify-content: left;
-    justify-self: left;
-    margin: 0% auto;
-    text-align: left;
-    padding: 20px;
-    border-radius: 3%;
-}
+
+
 .form {
     max-width: 400px;
     margin: 0 auto;
@@ -159,4 +153,22 @@ footer{
     margin-bottom: 10px;
     align-items: center;
     align-content: center;
+}
+.backup{
+    background-color:#994602;
+    padding: 0.5%;
+    padding-bottom: 0.1%;
+}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    display: block;
+    unicode-bidi: isolate;
+}
+#contact {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
 }
