@@ -6,12 +6,21 @@
 
 ## Description
 
-# Solar Sytem Researchers
+###  Solar Sytem Researchers
 As reserchers studying the solar sytem and the immense universe surround our precious planet earth, our web appication provides anyone anywhere to access data from our database about different planets in our solar sytem, filter them by the number of moons or by their planet size and also change the page to dark mode. The web application is very user friendly and responsive.
 
 ## Detailed Description
 
+The folder called,Solar-System-Phase1-project, contains  and three files two folders. The name of the two folders are:
+1. assets(This file has images used within the project as well as a file called style.css that contains the styling for the HTML document)
+2. src(This contains the JavaScript file needed to fetch data from our database and to add functionality to our buttons.)
 
+The other files in the main Solar-System-Phase1-project excluding the README.md file include:
+```
+1. A db.json file(This contiains a database of planets out-sourced from a public API at: https://github.com/k99sharma/planets-api/blob/main/controllers/getPlanet.js)
+
+2. An index.html file(This contains the documant the runs in the browser window)
+```
 ## Setup
 
 Run this command to get the backend started:
@@ -180,14 +189,13 @@ Below is an example of how you can instruct your audience on installing and sett
 
 Get a free API Key at:
 ```
- https://github.com/Bjoseph23/SA.01-WK2-Code-Challenge
-
+https://github.com/Bjoseph23/Solar-System-Phase1-project
  ```
 Clone the repo
 ```
-git clone https://github.com/Bjoseph23/SA.01-WK2-Code-Challenge
+git clone https://github.com/Bjoseph23/Solar-System-Phase1-project
 ```
-And Lastly, install relevent files with:
+And Lastlyin the terminal, install relevent files with:
 ```
  npm install
 ```
@@ -196,7 +204,7 @@ Git
 
 ### Installation instruction
 ```
-Git clone https://github.com/Bjoseph23/SA.01-WK1-Code-Challenge
+Git clone https://github.com/Bjoseph23/Solar-System-Phase1-project
 ```
 
 ## Lisences
