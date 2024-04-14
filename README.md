@@ -6,7 +6,7 @@
 
 ## Description
 
-###  Solar Sytem Researchers
+#### Solar Sytem Researchers
 As reserchers studying the solar sytem and the immense universe surround our precious planet earth, our web appication provides anyone anywhere to access data from our database about different planets in our solar sytem, filter them by the number of moons or by their planet size and also change the page to dark mode. The web application is very user friendly and responsive.
 
 ## Detailed Description
