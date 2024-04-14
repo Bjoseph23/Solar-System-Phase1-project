@@ -6,8 +6,8 @@
 
 ## Description
 
-#### Solar Sytem Researchers
-As reserchers studying the solar sytem and the immense universe surround our precious planet earth, our web appication provides anyone anywhere to access data from our database about different planets in our solar sytem, filter them by the number of moons or by their planet size and also change the page to dark mode. The web application is very user friendly and responsive.
+#### Solar Sytem Researchers Description
+As reserchers studying the solar sytem and the immense universe surround our precious planet earth, our web appication provides anyone anywhere to access data from our database about different planets in our solar sytem, filter them by the number of moons or by their planet size and also change the page to dark mode. The web application is very user friendly.
 
 ## Detailed Description
 
@@ -21,36 +21,21 @@ The other files in the main Solar-System-Phase1-project excluding the README.md 
 
 2. An index.html file(This contains the documant the runs in the browser window)
 ```
-## Setup
+In the web view, the user is able to interract with the data in various ways. The user can search a planet by name, filter the planets provided by size, filter the planets by number of moons. The user is also able to book a flight to any planet of their choice.
 
-Run this command to get the backend started:
-
-```console
-$ json-server --watch db.json
+## Response Format
+When a user opens the webpage, the fetch is:
 ```
-
-Test your server by visiting this route in the browser:
-
-[http://localhost:3000/planets](http://localhost:3000/planets)
-
-Then, open the `index.html` file on your browser to run the application.
-
-Write your code in the `src/index.js` file. The base URL for the API will be:
-[http://localhost:3000](http://localhost:3000).
-
-## Core Deliverables
-
-As a user, I can:
-
-1. See the first movie's details, including its **poster, title, runtime,
-   showtime, and available tickets** when the page loads. The number of
-   available tickets will need to be derived by subtracting the number of
-   `tickets_sold` from the theater's `capacity`. You will need to make a GET
-   request to the following endpoint to retrieve the film data:Flatdango
-
-   ```json
-   GET /plametslms/2
-
+fetch("http://localhost:3000/planets",{
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+  }})
+```
+For a fetch request for example for a planet with an id of 2:
+fetch("http://localhost:3000/planets/2)
+```json 
    Example Response:
    {
      "id": 2,
@@ -70,118 +55,6 @@ As a user, I can:
    }
    ```
 
-2. See a menu of all movies on the left side of the page in the `ul#films`
-   element when the page loads. (_optional_: you can style each film in the list
-   by adding the classes `film item` to each `li` element.) There is a
-   placeholder `li` in the `ul#films` element that is hardcoded in the HTML —
-   feel free to remove that element by editing the HTML file directly, or use
-   JavaScript to remove the placeholder element before populating the list. You
-   will need to make a GET request to the following endpoint to retrieve the
-   film data:
-
-   ```json
-   GET /films
-
-   Example response:
-   [
-      {
-        "id": 1,
-        "name":"Mercury",
-        "tagline":"Terrestrial Planet",
-        "tagline_icon":"https://img.icons8.com/ios/50/ffffff/earth-planet.png",
-        "picture":"https://media.istockphoto.com/id/183817880/photo/mercury.jpg?s=612x612&w=0&k=20&c=Kc_myCnUThIYyb8lVm0mOCtNWqMwRQdbbM8GvA9xoqc=",
-        "textureUrl":"https://www.solarsystemscope.com/textures/download/2k_mercury.jpg",
-        "description":"Mercury is the smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. It is the closest planet to the Sun. Mercury is a rocky planet, also known as a terrestrial planet. Mercury has a solid, cratered surface, much like the Earth's moon.",
-        "distanceFromSun":"57.94 ",
-        "planetSize":"4879",
-        "yearLength":"88",
-        "numberOfMoons":"0",
-        "nickname":"ROMAN GOD OF SPEED",
-        "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
-      },
-      {
-        "id": 2,
-        "name":"Venus",
-        "tagline":"Terrestrial Planet",
-        "tagline_icon":"https://img.icons8.com/ios/50/ffffff/earth-planet.png",
-        "picture":"https://upload.wikimedia.org/wikipedia/commons/0/08/Venus_from_Mariner_10.jpg",
-        "textureUrl":"https://www.solarsystemscope.com/textures/download/2k_venus_surface.jpg",
-        "description":"Venus is the second planet from the Sun and is Earth’s closest planetary neighbor. It’s one of the four inner, terrestrial (or rocky) planets, and it’s often called Earth’s twin because it’s similar in size and density. Venus rotates on its axis backward, compared to most of the other planets in the solar system. Venus was the first planet to be explored by a spacecraft. Venus has a solid surface covered in dome-like volcanoes, rifts, and mountains with expansive volcanic plains and vast, ridged plateaus.",
-        "distanceFromSun":"108.20",
-        "planetSize":"12104",
-        "yearLength":"225",
-        "numberOfMoons":"0",
-        "nickname":"ROMAN GODDESS OF LOVE",
-        "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
-      }
-   ]
-   ```
-
-3. Buy a ticket for a movie. After clicking the "Buy Ticket" button, I should
-   see the number of available tickets decreasing on the frontend. I should not
-   be able to buy a ticket if the showing is sold out (if there are 0 tickets
-   available). **A persistence mechanism is needed for this feature. Read the following paragraph for more details**.
-
-   When a ticket is purchased, you need to do the following 
-      - Persist the updated number of `tickets_sold` on
-      the server. Remember, the frontend shows the number of available tickets
-      based on the `tickets_sold` and the `capacity`, so only the `tickets_sold`
-      should be updated on the backend when a ticket is purchased. You will need to
-      make a request that follows this structure:
-
-      ```json
-      PATCH /planets/:id
-
-      Request Headers: {
-         "Content-Type": "application/json",
-         "Accept": "application/json",
-      }
-
-      Request Body: {
-      "id": 2
-      }
-      ----
-      Example Response:
-      {
-        "id": 2,
-        "name":"Venus",
-        "tagline":"Terrestrial Planet",
-        "tagline_icon":"https://img.icons8.com/ios/50/ffffff/earth-planet.png",
-        "picture":"https://upload.wikimedia.org/wikipedia/commons/0/08/Venus_from_Mariner_10.jpg",
-        "textureUrl":"https://www.solarsystemscope.com/textures/download/2k_venus_surface.jpg",
-        "description":"Venus is the second planet from the Sun and is Earth’s closest planetary neighbor. It’s one of the four inner, terrestrial (or rocky) planets, and it’s often called Earth’s twin because it’s similar in size and density. Venus rotates on its axis backward, compared to most of the other planets in the solar system. Venus was the first planet to be explored by a spacecraft. Venus has a solid surface covered in dome-like volcanoes, rifts, and mountains with expansive volcanic plains and vast, ridged plateaus.",
-        "distanceFromSun":"108.20",
-        "planetSize":"12104",
-        "yearLength":"225",
-        "numberOfMoons":"0",
-        "nickname":"ROMAN GODDESS OF LOVE",
-        "spaceTexture_url":"https://www.solarsystemscope.com/textures/download/2k_stars.jpg"
-      }
-      ```
-
-5. Delete a film from the server. Add a delete button next to each film in the
-   `ul#films` menu. When the button is clicked, remove the film from the list
-   and also delete the film on the server:
-
-   ```json
-   DELETE /films/:id
-
-   Example Response:
-   {}
-   ```
-
-6. When a movie is sold out (when there are no available tickets remaining),
-   indicate that the movie is sold out by changing the button text to "Sold
-   Out". Also update the film item in the `ul#films` menu by adding a class of
-   `sold-out` to the film. For reference, here's what the contents of the
-   `ul#films` element should look like with a sold out film:
-
-   ```html
-   <li class="film item">(Title of film)</li>
-   <li class="sold-out film item">(Title of a sold-out film)</li>
-   <li class="film item">(Title of film)</div>
-   ```
-
 ## Installation and Project Setup
 You use git clone to be able to download the documents in the GitHub
 
@@ -199,6 +72,24 @@ And Lastly in the terminal, install relevent files with:
 ```
  npm install
 ```
+
+## Setup
+
+After installation, run this command to get the backend started:
+
+```console
+$ json-server --watch db.json
+```
+
+Test your server by visiting this route in the browser:
+
+[http://localhost:3000/planets](http://localhost:3000/planets)
+
+Then, open the `index.html` file on your browser to run the application.
+
+Write your code in the `src/index.js` file. The base URL for the API will be:
+[http://localhost:3000](http://localhost:3000).
+
 ## Installation Requirements
 Git
 
