@@ -11,7 +11,7 @@ As reserchers studying the solar sytem and the immense universe surround our pre
 
 ## Detailed Description
 
-The folder called,Solar-System-Phase1-project, contains  and three files two folders. The name of the two folders are:
+The folder called,Solar-System-Phase1-project, contains three files and two folders. The name of the two folders are:
 1. assets(This file has images used within the project as well as a file called style.css that contains the styling for the HTML document)
 2. src(This contains the JavaScript file needed to fetch data from our database and to add functionality to our buttons.)
 
@@ -195,7 +195,7 @@ Clone the repo
 ```
 git clone https://github.com/Bjoseph23/Solar-System-Phase1-project
 ```
-And Lastlyin the terminal, install relevent files with:
+And Lastly in the terminal, install relevent files with:
 ```
  npm install
 ```
