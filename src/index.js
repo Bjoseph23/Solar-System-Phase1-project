@@ -206,7 +206,9 @@ filterMoonButton.addEventListener("click", () => {
     bookingContainer.appendChild(bookingMessage);
 
     // Clear form fields after submission
+    const form=document.getElementById("formsubmit")
     form.reset();
+
   });
 
   //Add functionality to our search button
