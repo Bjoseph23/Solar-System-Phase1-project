@@ -70,22 +70,22 @@ document.addEventListener("DOMContentLoaded", () => {
    moonNumber.innerHTML = `<p><strong>Number of Moons</strong>: ${planet.numberOfMoons} </p>`;
    planetContent.appendChild(moonNumber);
 
+   const planetSize = document.createElement("p");
+   planetSize.classList.add("info");
+   planetSize.id="planet-size"
+   planetSize.innerHTML = `<p><strong>Size of planet</strong>: ${planet.planetSize} million km</p>`;
+   planetContent.appendChild(planetSize);
+
    const nickName = document.createElement("p");
    nickName.classList.add("info");
    planetDescription.id="nick-name"
    nickName.innerHTML = `<p> <strong>Nickname: </strong>: ${planet.nickname} </p>`;
    planetContent.appendChild(nickName);
  }
- 
- //DOM elements for search
- const search =document.getElementById("serach");
- const searchButton=document.getElementById("searchButton")
- 
  //Function to handle planet search
  function findPlanet(searchname) {
-  
   const planetCards = document.querySelectorAll(".card");
-  //For each planet that has a matching name, displat it, else if not don't
+  //For each planet that has a matching name, displat it, else don't
   for (const pcard of planetCards) {
     const pcardName = pcard.querySelector("#planet-name").innerText.toLowerCase();
     const searchTerm = searchname.toLowerCase();
@@ -96,8 +96,59 @@ document.addEventListener("DOMContentLoaded", () => {
       pcard.style.display = "none";    
     }
   }
-  
-}
+ }
+ //function to filter by planet size
+ const filterSizeButton = document.getElementById("filter-size");
+
+ filterSizeButton.addEventListener("click", () => {
+  // Declare a function that will handle the sorting of planets in ascending order
+   function sortBySize(planetA, planetB) {
+     return planetA.planetSize - planetB.planetSize; // This line compares the planetSize property of both planets.A positive result indicates planetA is larger, a negative result indicates planetB is larger.
+   }
+   // Get an array of all planets from fetched data. This is another fetch request because the data being received is not in the usual order of that in the db.file.
+   const allPlanets = fetch("http://localhost:3000/planets") // Allocate our fetch request to a variable so that we do not need type the same fetch request again
+     .then((resp) => resp.json())
+     .then((data) => data);
+ 
+   // Sort the planet data by size
+   allPlanets.then((planets) => planets.sort(sortBySize));//Use .sort built in fucntion to sort the planets based on their size and call our function sortBySize
+ 
+   // Clear the existing planet list, this is to remove the previous ranking from distace from sun
+   planetList.innerHTML = "";
+ 
+   // Display sorted planets on each card
+   allPlanets.then((planets) => planets.forEach((planet) => displayPlanetDetails(planet)));
+ });
+ //function to filter by number of moons
+const filterMoonButton = document.getElementById("filter-moon"); // Assuming the button has id "filter-moon"
+
+//Add an event listener for when the filter butoon for Number of moons button is clicked
+filterMoonButton.addEventListener("click", () => {
+  // Declare a function that will handle the sorting of planets by number of moons (descending order)
+  function sortByMoonCount(planetA, planetB) {
+    return planetB.numberOfMoons - planetA.numberOfMoons; // Descending order (most moons first) 
+  }
+
+  // Get an array of all planets from fetched data. This is another fetch request because the data being received is not in the usual order of that in the db.file.
+  allPlanets = fetch("http://localhost:3000/planets") // Allocate our fetch request to a variable again. We cannot use the other variable because of the block scope logic
+    .then((resp) => resp.json())
+    .then((data) => data);
+
+  // Sort the planet data by number of moons (descending order)
+  allPlanets.then((planets) => planets.sort(sortByMoonCount));
+
+  // Clear the existing planet list
+  planetList.innerHTML = "";
+
+  // Display sorted planets on each card
+  allPlanets.then((planets) => planets.forEach((planet) => displayPlanetDetails(planet)));
+});
+
+
+ //DOM elements for search
+ const search =document.getElementById("serach");
+ const searchButton=document.getElementById("searchButton")
+ 
   //Add functionality to our Submit button
   form.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevent default form submission
@@ -182,6 +233,6 @@ document.addEventListener("DOMContentLoaded", () => {
    })
    .catch((error) => {
      console.error("Fetch error:", error);
-     planetList.innerHTML = "<h2><p><em></em>Error fetching data.</p></h2>";
+     planetList.innerHTML = "<h2><p><em></em>Error fetching data.</p></h2>";// If the data is not succesfully fetched, an error is displayed in the console
    });
 });
